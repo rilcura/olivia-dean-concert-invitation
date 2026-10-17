@@ -106,7 +106,8 @@ document.head.append(youtubeScript);
 
 const notificationStatus=document.querySelector('#notification-status');
 const retryNotification=document.querySelector('#notification-retry');
-const notificationKey='thea-concert-2027-01-14-yes-submitted';
+const notificationTest=new URLSearchParams(location.search).get('notification_test')==='1';
+const notificationKey='thea-concert-2027-01-14-yes-submitted'+(notificationTest?'-test':'');
 let notificationSending=false,notificationSubmitted=false;
 function alreadySubmitted(){
   try{return localStorage.getItem(notificationKey)==='true'}catch{return false}
@@ -117,16 +118,16 @@ async function notifyYes(){
     notificationStatus.textContent='Your response was already submitted from this browser.';return;
   }
   notificationSending=true;retryNotification.hidden=true;
-  notificationStatus.textContent='Sending your YES…';
-  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),15000);
+  notificationStatus.textContent=notificationTest?'Sending a test email (not an RSVP)…':'Sending your YES… Please keep this page open.';
+  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),60000);
   try{
     const response=await fetch('https://formsubmit.co/ajax/randzellcura@gmail.com',{
       method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},signal:controller.signal,
       body:JSON.stringify({
-        _subject:'Concert invitation: YES was pressed',_template:'table',
+        _subject:notificationTest?'BROWSER TEST — concert invitation (not an acceptance)':'Concert invitation: YES was pressed',_template:'table',
         invitation:'Thea — Olivia Dean, Manila, January 14, 2027',
-        response:'YES, Absolutely',
-        message:'The YES button was pressed on the concert invitation for Thea.',
+        response:notificationTest?'TEST ONLY — not an acceptance':'YES, Absolutely',
+        message:notificationTest?'Browser verification test only. Thea has NOT accepted the invitation.':'The YES button was pressed on the concert invitation for Thea.',
         submitted_at:new Date().toISOString(),
         _url:'https://rilcura.github.io/olivia-dean-concert-invitation/'
       })
@@ -136,12 +137,13 @@ async function notifyYes(){
       notificationStatus.textContent='Email setup is still pending. Please message me your answer.';
       retryNotification.hidden=false;return;
     }
-    if(!response.ok||!(result.success===true||result.success==='true'))throw new Error('Submission rejected');
+    if(!response.ok||!(result.success===true||result.success==='true'))throw new Error(result.message||'Email service rejected the request');
     notificationSubmitted=true;
     try{localStorage.setItem(notificationKey,'true')}catch{}
-    notificationStatus.textContent='Your YES was submitted. Message me and we’ll sort out the details.';
-  }catch{
-    notificationStatus.textContent='Your YES is noted here, but the email couldn’t be submitted. Try again or message me.';
+    notificationStatus.textContent=notificationTest?'Test email submitted. This was not an RSVP.':'Your YES was submitted. Message me and we’ll sort out the details.';
+  }catch(error){
+    console.warn('Email notification failed:',error.name,error.message);
+    notificationStatus.textContent=error.name==='AbortError'?'The email service is taking too long. Your YES is noted here. Try again or message me.':'Your YES is noted here, but the email couldn’t be submitted. Try again or message me.';
     retryNotification.hidden=false;
   }finally{clearTimeout(timeout);notificationSending=false}
 }
