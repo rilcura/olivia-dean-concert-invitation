@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+:root{--paper:#f5eddf;--wine:#702d3c;--rose:#d79794;--ink:#582c36}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100svh}body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='.24' filter='url(%23n)'/%3E%3C/svg%3E")} .frame{position:fixed;inset:15px;border:1px solid #702d3c40;pointer-events:none}header,footer{display:flex;justify-content:space-between;padding:35px 5%;font-size:10px;font-weight:600;letter-spacing:2px}main{max-width:1160px;margin:auto;padding:35px 45px 10px}.invitation{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:75px;min-height:650px}.art{height:480px;position:relative;isolation:isolate}.sleeve{position:absolute;width:310px;height:385px;top:45px;left:0;background:var(--rose);transform:rotate(-9deg);box-shadow:0 22px 35px #582c3620;border:1px solid #702d3c35;padding:26px;z-index:2}.sleeve>span{font:italic 36px/1.05 'Playfair Display',Georgia,serif}.flower{font-size:230px;line-height:1.1;text-align:center;color:var(--wine)}.sleeve small{font-size:9px;letter-spacing:3px}.record{width:350px;height:350px;border-radius:50%;position:absolute;left:100px;top:80px;background:repeating-radial-gradient(circle,#292323 0 2px,#393131 3px 4px,#262020 5px 7px);box-shadow:10px 18px 26px #582c3630;display:grid;place-items:center;transform:rotate(15deg)}.label{width:124px;height:124px;border-radius:50%;background:#e8bfa6;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #8d5f53}.label span{font-size:30px}.label small{text-align:center;letter-spacing:2px;font-size:8px}.sticker{position:absolute;z-index:3;bottom:15px;right:2px;width:128px;height:128px;background:#e6c777;border-radius:50%;display:grid;place-content:center;text-align:center;font:italic 22px/1.15 'Playfair Display',Georgia,serif;transform:rotate(11deg);border:1px solid #702d3c40}.eyebrow{font-size:10px;letter-spacing:2.5px;font-weight:700;margin:0 0 23px}h1,h2{font:500 clamp(48px,5.1vw,70px)/1.06 'Playfair Display',Georgia,serif;letter-spacing:-2px;margin:0 0 24px}h1 em,h2 em{font-weight:500;color:#9f4b55}.description{font-size:14px;line-height:1.8}.ticket{display:flex;gap:35px;margin:28px 0;border-top:1px solid #702d3c40;border-bottom:1px solid #702d3c40;padding:18px 0}.ticket span{font-size:8px;letter-spacing:1.7px;line-height:2}.ticket strong{font-size:14px;letter-spacing:0;font-weight:500}.question{font-size:14px}.actions{display:flex;gap:12px;align-items:center;min-height:55px}button{font:600 13px 'DM Sans',sans-serif;border:1px solid var(--wine);border-radius:3px;cursor:pointer;min-height:48px;touch-action:manipulation}#yes{background:var(--wine);color:var(--paper);padding:15px 24px;box-shadow:0 4px 0 #4c1f2a;transition:transform .2s,box-shadow .2s}#yes span{margin-left:15px}#yes:hover{transform:translateY(-3px);box-shadow:0 7px 0 #4c1f2a}#no{background:var(--paper);color:var(--wine);padding:15px 24px;z-index:10}button:focus-visible{outline:3px solid #9c6d16;outline-offset:5px}.hint{font-size:10px;line-height:1.7;margin:18px 0;color:#795b60}.status{min-height:18px;text-align:center;font-size:12px}.confirmation[hidden],.copy[hidden]{display:none}.confirmation{animation:reveal .65s both}.personal{font:italic 22px 'Playfair Display',Georgia,serif}footer{padding-top:25px}footer i{margin-left:14px;font-size:17px}.heart{position:fixed;pointer-events:none;color:var(--wine);z-index:20;animation:float 2.4s ease-out forwards;font-size:24px}@keyframes float{from{transform:translateY(0) rotate(0);opacity:1}to{transform:translateY(-220px) rotate(30deg);opacity:0}}@keyframes reveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}@media(min-width:850px){.art{animation:reveal 1s both}.copy{animation:reveal 1s .15s both}}@media(max-width:850px){header,footer{padding:30px 8%;font-size:8px;letter-spacing:1.4px}main{padding:0 30px}.invitation{grid-template-columns:1fr;gap:32px;min-height:0;max-width:480px;margin:auto}.art{height:290px;width:310px;margin:0 auto}.sleeve{width:205px;height:255px;top:16px;left:8px;padding:18px}.sleeve>span{font-size:25px}.flower{font-size:145px}.sleeve small{font-size:6px;letter-spacing:2px}.record{width:235px;height:235px;left:75px;top:30px}.label{width:84px;height:84px}.label small{font-size:6px}.label span{font-size:22px}.sticker{width:92px;height:92px;right:3px;bottom:0;font-size:17px}.copy,.confirmation{text-align:center}h1,h2{font-size:clamp(43px,10vw,60px)}.ticket,.actions{justify-content:center}.eyebrow{margin-bottom:18px}.description{font-size:13px}footer{margin-top:5px;gap:20px}.frame{inset:10px}}@media(max-width:360px){main{padding:0 24px}.art{transform:scale(.85);transform-origin:top center;height:250px;width:280px}.ticket{gap:22px}.actions{gap:9px}#yes{padding:15px}#no{padding:15px 18px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Centered invitation, with the original vinyl illustration as background. */
+header{justify-content:center;position:relative;z-index:1}
+main{max-width:100%;padding:20px 28px 45px;position:relative}
+.invitation{display:flex;justify-content:center;min-height:570px;position:relative;isolation:isolate;gap:0;max-width:none}
+.art{position:fixed;left:calc(50% - 540px);top:calc(50% - 260px);width:470px;height:480px;opacity:.14;transform:rotate(-8deg) scale(1.65);pointer-events:none;z-index:-1;animation:none;filter:saturate(.75)}
+.copy,.confirmation{width:min(100%,620px);text-align:center;padding:30px 16px;background:radial-gradient(ellipse,#f5eddfeb 20%,#f5eddfb0 60%,transparent 75%)}
+h1,h2{font-size:clamp(43px,5.3vw,68px)}
+.ticket{justify-content:center;max-width:400px;margin:28px auto}
+.actions{justify-content:center}.hint{font-size:11px}.question{line-height:1.7}
+.music{position:relative;z-index:1;text-align:center;width:min(100%,360px);margin:20px auto 0}
+.music .eyebrow{font-size:9px;margin-bottom:14px;letter-spacing:1.8px}
+#music-player{width:100%;height:203px;min-height:200px;border:0;border-radius:5px;background:#e2d7c7}
+.music .hint{margin:10px 0 6px}.music a{font-size:11px;color:var(--wine);text-underline-offset:4px}
+.status{font-size:11px;margin-top:20px}
+@media(max-width:850px){.art{left:calc(50% - 310px);top:220px;transform:rotate(-8deg) scale(1.4);width:470px;height:480px}.art .sleeve{width:310px;height:385px;padding:26px}.art .sleeve>span{font-size:36px}.art .flower{font-size:230px}.art .record{width:350px;height:350px;left:100px;top:80px}.invitation{min-height:500px}.copy,.confirmation{padding:25px 0}.music{margin-top:25px}}
+@media(max-width:360px){main{padding:5px 24px 30px}.art{height:480px;width:470px}.actions{gap:12px}}
+/* Reserved central play area prevents NO from covering text or controls. */
+.actions{flex-direction:column;gap:8px}
+.no-zone{position:relative;display:grid;place-items:center;width:min(100%,480px);height:140px;flex:none;isolation:isolate}
+#no{max-width:calc(100% - 12px);white-space:normal;line-height:1.25;min-height:48px;padding:13px 18px}
+#no[hidden]{display:none}
+#hint{min-height:38px;margin-top:5px}
+@media(max-width:480px){.no-zone{height:145px}#no{font-size:12px}}
+/* Background soundtrack: remove the video from the visual and focus layouts. */
+.background-player{position:fixed;width:360px;height:203px;left:0;top:0;clip-path:inset(50%);overflow:hidden;pointer-events:none;opacity:0}
+.music{margin:15px auto 0}
+.music-toggle{min-height:44px;background:transparent;color:var(--wine);border:1px solid #702d3c45;border-radius:24px;padding:10px 18px;font-size:11px;font-weight:500}
+.music-toggle:disabled{cursor:default;opacity:.6}
+.music .hint{font-size:10px;margin-top:8px}
+.music a[hidden]{display:none}
+/* Phone sizing and safe areas, including small screens and landscape. */
+html,body{width:100%;overflow-x:clip}
+.background-player{width:200px;height:200px}
+.background-player #music-player{width:200px;height:200px;min-height:200px}
+header{padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
+main{padding-bottom:max(32px,env(safe-area-inset-bottom))}
+@media(max-width:600px){
+ header{padding-top:max(24px,env(safe-area-inset-top));padding-bottom:18px;font-size:9px}
+ main{padding-top:0;padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
+ .invitation{min-height:0;align-items:flex-start}
+ .copy,.confirmation{min-width:0;padding:24px 0 12px}
+ h1,h2{font-size:clamp(36px,9.7vw,52px);letter-spacing:-1.4px;line-height:1.1;overflow-wrap:break-word}
+ .eyebrow{font-size:9px;letter-spacing:1.6px;margin-bottom:22px;line-height:1.7}
+ .ticket{margin:22px auto;padding:14px 0;gap:24px;flex-wrap:wrap}
+ .ticket span{font-size:9px}.ticket strong{font-size:15px}
+ .question,.description{font-size:14px;line-height:1.65}
+ #yes,#no{min-height:48px;font-size:13px}
+ .no-zone{height:132px}
+ #hint{font-size:12px;line-height:1.6;min-height:40px}
+ .music{margin-top:12px}.music-toggle{font-size:12px;min-height:48px;padding:12px 20px}
+ .music .hint,.music a{font-size:12px}
+ .music a{display:inline-block;padding:12px}.music a[hidden]{display:none}
+ .status{font-size:12px;line-height:1.5}
+}
+@media(hover:none){#yes:hover{transform:none;box-shadow:0 4px 0 #4c1f2a}}
+@media(max-height:500px) and (orientation:landscape){header{padding-top:20px;padding-bottom:10px}.invitation{min-height:0}.copy,.confirmation{padding-top:12px}main{padding-top:0}}
+/* After the last NO, bring YES into the center of the reserved button area. */
+.actions.yes-final{min-height:200px;justify-content:center;align-items:center;gap:0}
+.yes-final .no-zone{display:none}
+.actions.yes-final #yes{width:min(100%,320px);min-height:80px;padding:22px 28px;font-size:20px;line-height:1.3;animation:yes-arrives .4s ease-out both}
+@keyframes yes-arrives{from{transform:scale(.88)}to{transform:scale(1)}}
+@media(max-width:600px){.actions.yes-final #yes{width:min(100%,300px);min-height:76px;font-size:18px}}
+#hint[hidden],#notification-retry[hidden]{display:none}

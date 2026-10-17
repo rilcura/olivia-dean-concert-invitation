@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#702d3c"><meta name="description" content="Thea, a little invitation to a night of soul in Manila. January 14, 2027.">
+<title>Thea, up for a concert?</title>
+<link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+<div class="frame" aria-hidden="true"></div>
+<header><span>A LITTLE INVITATION</span></header>
+<main>
+<section class="invitation" aria-labelledby="title">
+<div class="art" aria-hidden="true"><div class="sleeve"><span>Olivia<br>Dean</span><div class="flower">✳</div><small>MANILA · 2027</small></div><div class="record"><div class="label"><span>✳</span><small>SIDE A</small></div></div></div>
+<div class="copy" id="invite">
+<p class="eyebrow">MANILA · JANUARY 14, 2027</p>
+<h1 id="title">Hey Thea,<br><em>up for a concert?</em></h1>
+
+<div class="ticket"><span>THE SOUNDTRACK<br><strong>Olivia Dean</strong></span></div>
+<p class="question">Want to come along? I’ve got an extra ticket.</p>
+<div class="actions"><button id="yes">YES, Absolutely <span aria-hidden="true">↗</span></button><div class="no-zone" id="no-zone"><button id="no">NO :(</button></div></div>
+<p class="hint" id="hint" aria-live="polite">The “no” button might take a little convincing.</p>
+</div>
+<div class="confirmation" id="confirmation" hidden>
+<p class="eyebrow">SOUNDS GOOD!</p><h2 tabindex="-1" id="confirmed-title">Nice!<br><em>See you there.</em></h2>
+<p class="description">Message me and we’ll sort out the details.</p><div class="ticket"><span>THE CONCERT<br><strong>January 14, 2027</strong></span><span>SEE YOU IN<br><strong>Manila</strong></span></div>
+<p class="hint" id="notification-status" role="status" aria-live="polite"></p><button id="notification-retry" class="music-toggle" hidden>Retry sending</button>
+</div>
+</section>
+<aside class="music" aria-label="Background music"><div class="background-player" aria-hidden="true" inert><div id="music-player"></div></div><button class="music-toggle" id="music-toggle" disabled aria-describedby="music-status">Loading music…</button><p class="hint" id="music-status" role="status">A Couple Minutes · Olivia Dean</p><a id="music-fallback" href="https://youtu.be/euYe6W7d-rI" target="_blank" rel="noopener noreferrer" hidden>Listen on YouTube ↗</a></aside>
+<p class="status" id="status" role="status" aria-live="polite"></p>
+</main>
+
+</body></html>
