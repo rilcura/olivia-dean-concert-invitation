@@ -1,4 +1,8 @@
-# Thea, up for a concert?
+# Olivia Dean concert invitation
+
+Live site: https://rilcura.github.io/olivia-dean-concert-invitation/
+
+Source: https://github.com/rilcura/olivia-dean-concert-invitation
 
 A friendly, responsive concert invitation for Thea with original vinyl background artwork. The date and city are supplied by the invitation sender, not verified event listings. No venue or time is assumed. Accepting displays a confirmation and submits an email notification through FormSubmit.
 
@@ -14,7 +18,7 @@ Each press of NO changes its label and relocates it inside a reserved central pl
 
 The official YouTube player embeds the supplied performance of Olivia Dean's A Couple Minutes (video euYe6W7d-rI). It attempts playback on load and retries on the first click/key activation if blocked. The video is visually hidden and excluded from keyboard navigation. A small play/pause music toggle remains visible. Volume starts at 50 percent. No two-minute cutoff is applied: A Couple Minutes is the song title. Browser policies, YouTube availability, consent screens and user settings can prevent autoplay. A YouTube link remains available if embedding fails. Serving over HTTP/HTTPS is recommended: local file pages can lack the referrer required by YouTube. Google Fonts and YouTube contact their respective services; no recording is downloaded or bundled.
 
-For sharing with Thea, choose a host/audience she can access. A private Sites preview is owner-only until sharing is configured.
+Hosted publicly on GitHub Pages from the main branch root. Commit and push changes to update the site.
 
 ## Mobile verification
 
@@ -23,4 +27,4 @@ After press 20, YES enlarges and centers in the reserved action area. Reduced mo
 
 ## YES email notification
 
-Recipient: randzellcura@gmail.com, through https://formsubmit.co/ajax/randzellcura@gmail.com. This third-party form service requires one-time activation using the recipient's emailed Activate Form link. A setup request received an activation-required response; inbox delivery is not yet verified. The request contains only the invitation, YES response and submission timestamp. It does not verify who clicked. The UI distinguishes pending activation, accepted submission and failure; accepted does not guarantee inbox delivery. A retry is available after failure. Browser-local duplicate prevention is not server-side abuse protection. No private API key is included. Static copies retain this configured recipient and depend on FormSubmit availability and site-specific activation.
+Recipient: randzellcura@gmail.com, through https://formsubmit.co/ajax/randzellcura@gmail.com. This third-party form service requires one-time activation using the recipient's emailed Activate Form link. A setup request received an activation-required response; the original Sites-domain setup email arrived, while GitHub-domain activation is pending. The request contains only the invitation, YES response and submission timestamp. It does not verify who clicked. The UI distinguishes pending activation, accepted submission and failure; accepted does not guarantee inbox delivery. A retry is available after failure. Browser-local duplicate prevention is not server-side abuse protection. No private API key is included. Static copies retain this configured recipient and depend on FormSubmit availability and site-specific activation.
