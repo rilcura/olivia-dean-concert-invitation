@@ -58,7 +58,7 @@ window.addEventListener('resize',()=>{if(noPresses>0&&noPresses<20&&!document.qu
 reduced.addEventListener('change',()=>{no.style.visibility='visible';clearTimeout(timer)});
 
 // The embed supplies background sound; the page exposes its own music toggle.
-let player,ready=false,started=false,userPaused=false,hadMusicGesture=false;
+let player,ready=false,started=false,userPaused=false;
 const musicStatus=document.querySelector('#music-status');
 const musicToggle=document.querySelector('#music-toggle');
 const musicFallback=document.querySelector('#music-fallback');
@@ -90,13 +90,11 @@ window.onYouTubeIframeAPIReady=()=>{
   });
 };
 musicToggle.addEventListener('click',()=>{
-  hadMusicGesture=true;
   if(!ready)return;
   if(player.getPlayerState()===YT.PlayerState.PLAYING){userPaused=true;player.pauseVideo()}
   else{userPaused=false;player.unMute();player.playVideo()}
 });
 function tryMusic(event){
-  hadMusicGesture=true;
   if(event.target===musicToggle)return;
   if(ready&&!userPaused){
     player.unMute();
