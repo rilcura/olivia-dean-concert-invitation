@@ -4,11 +4,23 @@ Live site: https://rilcura.github.io/olivia-dean-concert-invitation/
 
 Source: https://github.com/rilcura/olivia-dean-concert-invitation
 
-A friendly, responsive concert invitation for Thea with original vinyl background artwork. The date and city are supplied by the invitation sender, not verified event listings. No venue or time is assumed. Accepting displays a confirmation and submits an email notification through FormSubmit.
+A personal, responsive concert-invitation microsite with vinyl-inspired artwork.
+
+**Stack:** HTML, CSS, browser JavaScript, YouTube IFrame API, FormSubmit, and GitHub Pages.
+
+## Project scope
+
+The implementation combines responsive layout, keyboard-triggered interactions, confirmation state, optional music controls, and a third-party email submission flow. This is a personal frontend experiment, not an event-booking or ticketing service.
+
+The playful NO interaction eventually removes the decline control. This behavior is unsuitable as a reusable consent or registration pattern. A general-purpose version should retain an equally accessible decline action.
+
+## Current behavior
+
+The invitation uses personalized content. The date and city are supplied by the invitation sender, not verified event listings. No venue or time is assumed. Accepting displays a confirmation and submits an email notification through FormSubmit.
 
 ## Preview and deploy
 
-Open index.html directly, or serve dist with any static server (for example `npx serve .`). Upload index.html, style.css and script.js to Netlify Drop, GitHub Pages, Cloudflare Pages, or any static host. No build or environment variables are needed. Google Fonts are optional; system fonts work offline.
+Open index.html directly, or serve the repository root with any static server. With Python installed, run `python -m http.server 8000` and open `http://localhost:8000`. Upload index.html, style.css and script.js to Netlify Drop, GitHub Pages, Cloudflare Pages, or any static host. No build or environment variables are needed. Google Fonts are optional; system fonts work offline.
 
 ## Interaction and accessibility
 
@@ -32,3 +44,9 @@ Recipient: randzellcura@gmail.com, through https://formsubmit.co/ajax/randzellcu
 ## Final browser check, 17 October 2026
 
 Live GitHub Pages content checked in 320 x 568 and 390 x 844 browser viewports. Verified changing NO labels, central containment, final disappearance of NO and hint, enlarged YES, confirmation, music play/pause/resume, and a clearly labelled browser-test email received in the destination inbox. The page requests audible autoplay; the test browser blocked it until interaction, so autoplay is not guaranteed on iOS, Android, or other browsers. Physical-device testing was not performed. A deliberate music pause is respected. Email requests allow up to 60 seconds for the provider; delivery still depends on that external service. ?notification_test=1 sends labelled test messages without storing a normal RSVP flag. Share the normal URL without that parameter.
+
+## Reuse and next steps
+
+Before reusing the source, replace personalized text, the event details, the FormSubmit destination, the submission flag, and the embedded music selection. The configured email endpoint sends real messages, including in test mode. Previewing the layout does not require pressing YES.
+
+Keep the provider activation, delivery-status, and duplicate-prevention limitations described above. Future improvements include a persistent decline action, separate configuration, automated interaction tests, and a reusable sample with fictional content. No screenshots or new test results are asserted by this documentation update.
